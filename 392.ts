@@ -8,3 +8,5 @@ function isSubsequence(s: string, t: string): boolean {
     }
     return dem === s.length;
 };
+
+console.log(isSubsequence("lmao", "abccc"));

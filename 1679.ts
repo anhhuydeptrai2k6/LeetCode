@@ -5,7 +5,7 @@ function maxOperations(nums: number[], k: number): number {
     let left : number = 0;
     let right: number = nums.length - 1;
     while (left < right) {
-        const sum : number = (nums[left] + nums[right]);
+        const sum : number = (nums[left]! + nums[right]!);
         if (sum === k){
             soLan ++;
             left ++;

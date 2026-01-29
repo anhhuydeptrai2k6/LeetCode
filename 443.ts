@@ -6,7 +6,7 @@ function compress(chars: string[]): number {
         if (i + 1 < chars.length && chars[i] === chars[i + 1]) {
             dem++;
         } else {
-            chars[write++] = chars[i];
+            chars[write++]! = chars[i]!;
             if (dem > 1) {
                 for (let c of dem.toString()) {
                     chars[write++] = c;

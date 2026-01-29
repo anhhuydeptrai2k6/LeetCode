@@ -5,17 +5,21 @@ function reverseVowels(s: string): string {
     let layVowels : string[] = [];
     let a : number[] = [];
 
-    for (let i = 0; i < mang.length; i++) {
-        if (vowels.indexOf(mang[i]) !== -1) {
-            layVowels.push(mang[i]);
+    for (let i : number = 0; i < mang.length; i++) {
+        const so : string = mang[i]!;
+        if (vowels.indexOf(so) !== -1) {
+            layVowels.push(so);
             a.push(i);
         }
     }
 
     layVowels.reverse();
 
-    for (let i = 0; i < a.length; i++) {
-        mang[a[i]] = layVowels[i];
+    for (let i : number = 0; i < a.length; i++) {
+        const indx : number = a[i]!;
+        mang[indx] = layVowels[i]!;
     }
     return mang.join("");
 };
+
+console.log(reverseVowels("lmao"));
